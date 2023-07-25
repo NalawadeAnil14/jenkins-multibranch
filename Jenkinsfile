@@ -9,7 +9,7 @@ pipeline {
 
     stage('fix1') {
       when {
-        branch 'fix'
+        branch 'fix-*'
       }
 
       steps {
