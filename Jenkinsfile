@@ -1,10 +1,5 @@
 pipeline {
   agent any
-  when {
-    expression {
-      return isLinux()
-    }
-  }
   
   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
@@ -12,6 +7,11 @@ pipeline {
   
   stages {
     stage('Hello') {
+      when {
+          expression {
+            return isLinux()
+          }
+      }
       steps {
         echo "Hello"
       }
