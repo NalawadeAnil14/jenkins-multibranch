@@ -9,7 +9,7 @@ pipeline {
     stage('Hello') {
       when {
           expression {
-            return isLinux()
+            return isUnix()
           }
       }
       steps {
