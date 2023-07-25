@@ -23,7 +23,7 @@ pipeline {
       }
 
       steps {
-        echo "When PR is created"
+        echo "When PR is created only"
       }
     }
   }
