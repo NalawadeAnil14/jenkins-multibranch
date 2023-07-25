@@ -1,6 +1,11 @@
 pipeline {
   agent any
-
+  when {
+    expression {
+      return isLinux()
+    }
+  }
+  
   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
   }
